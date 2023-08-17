@@ -1,0 +1,13 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="load-tag-data" author="root">
+
+        <loadData encoding="UTF-8" file="db.changelog/mockdata/tag-data.csv"
+                  schemaName="public"
+
+                  tableName="tag"/>
+    </changeSet>
+</databaseChangeLog>

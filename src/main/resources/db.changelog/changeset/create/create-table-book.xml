@@ -1,0 +1,45 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="create-table-book" author="root">
+        <createTable tableName="book">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="pub_date" type="TIMESTAMP WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_bestseller" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="slug" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="image" type="VARCHAR(255)"/>
+            <column name="description" type="text"/>
+            <column name="price" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discount" type="int" defaultValue="0">
+                <constraints nullable="false"/>
+            </column>
+            <column name="bought" type="int" defaultValue="0">
+                <constraints nullable="false"/>
+            </column>
+            <column name="in_cart" type="int" defaultValue="0">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="postponed" type="int" defaultValue="0">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="genregenerator" th:remove="tag">
+
+
+        <div th:each="genre : ${genreslist}" th:class="${genre.children.isEmpty()? 'Tags' : 'Tags Tags_embed'}" >
+
+            <div class="Tags-title"  >
+                <div class="Tag">
+                    <a th:href="@{/books/genres/{genreSlug}(genreSlug = ${genre.slug})}" href="/genres/slug.html" th:text="${genre.name + ' (' + genre.books.size() + ')'}">Лёгкое чтение
+                        <span class="undefined-amount" th:text="${genre.books.size()}">(15638)</span></a>
+                </div>
+            </div>
+            <div th:class="Tag" th:with="genreslist=${genre.children}"
+                 th:include="~{fragments/genre_tag_fragment.html :: genregenerator}" th:remove="tag">
+            </div>
+        </div>
+</div>

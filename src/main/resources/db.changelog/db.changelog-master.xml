@@ -1,0 +1,52 @@
+<databaseChangeLog
+xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <include file="changeset/create/create-table-author.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-book.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-book2author.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/add-foreign-key.xml" relativeToChangelogFile="true"/>
+
+    <include file="changeset/create/create-table-tag.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-book2tag.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/add-foreign-key-book2tag.xml" relativeToChangelogFile="true"/>
+
+    <include file="changeset/create/create-table-genre.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-book2genre.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/add-foreign-key-book2genre.xml" relativeToChangelogFile="true"/>
+
+    <include file="changeset/create/create-table-bookfile.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-user.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-book-rate.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-book-review.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-book-review-like.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-bookstoreusers.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-blacklist_token.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-book2user.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/create/create-table-book2user_type.xml" relativeToChangelogFile="true"/>
+
+
+    <include file="changeset/load/load-authordata.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/load/load-bookdata.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/load/load-book2author-data.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/load/load-tag-data.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/load/load-book2tag-data.xml" relativeToChangelogFile="true"/>
+
+    <include file="changeset/load/load-genre-data.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/load/load-book2genre-data.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/load/load-users.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/load/load-bookfiles.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/load/load-book-rate.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/load/load-book-review.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/load/load-book-review-like.xml" relativeToChangelogFile="true"/>
+    <include file="changeset/load/load-book2user_type.xml" relativeToChangelogFile="true"/>
+
+
+
+</databaseChangeLog>

@@ -1,0 +1,29 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="create-table-book-review-like" author="root">
+        <createTable tableName="book_review_like">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="user_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="review_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="value" type="tinyint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="time" type="TIMESTAMP WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addUniqueConstraint tableName="book_review_like" columnNames="user_id, review_id"/>
+
+    </changeSet>
+
+</databaseChangeLog>

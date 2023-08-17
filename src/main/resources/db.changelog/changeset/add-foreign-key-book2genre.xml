@@ -1,0 +1,17 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="add-fk-book2genre" author="root">
+
+
+        <addForeignKeyConstraint constraintName="fk_bookG"
+                                 baseTableName="book2genre" baseColumnNames="book_id"
+                                 referencedTableName="book" referencedColumnNames="id" />
+        <addForeignKeyConstraint constraintName="fk_genre"
+                                 baseTableName="book2genre" baseColumnNames="genre_id"
+                                 referencedTableName="genre" referencedColumnNames="id" />
+    </changeSet>
+
+</databaseChangeLog>

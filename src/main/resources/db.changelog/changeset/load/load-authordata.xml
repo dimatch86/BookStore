@@ -1,0 +1,25 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="load-author-data" author="root">
+
+        <loadData file="db.changelog/mockdata/author-data300.csv"
+                  schemaName="public"
+
+                  tableName="author"/>
+    </changeSet>
+    <!--<changeSet id="load-author-data" author="root">
+        <sqlFile dbms="postgres" path="authors-data.sql" />
+    </changeSet>-->
+
+    <!--<changeSet author="load-author-data" id="root">
+        <sqlFile dbms="postgres"
+                 endDelimiter="\nGO"
+                 path="auth-data.sql"
+
+                 splitStatements="false"
+                 />
+    </changeSet>-->
+</databaseChangeLog>
